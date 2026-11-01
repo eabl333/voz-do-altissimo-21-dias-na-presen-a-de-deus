@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>21 Dias na Presença de Deus | Voz do Altíssimo</title>
+  <meta name="description" content="Três semanas para fortalecer sua fé e aprofundar sua intimidade com Deus. Devocional diário da Voz do Altíssimo.">
+  <meta name="theme-color" content="#C6A15B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <button class="brand" data-view="home" aria-label="Voz do Altíssimo - início">
+    <span class="brand-mark">✝</span>
+    <span class="brand-name">Voz do Altíssimo</span>
+  </button>
+  <div class="tools" role="group" aria-label="Opções de leitura">
+    <button id="fontDown" class="tool" aria-label="Diminuir fonte">A−</button>
+    <button id="fontUp" class="tool" aria-label="Aumentar fonte">A+</button>
+    <button id="readingBtn" class="tool" aria-pressed="false" aria-label="Modo de leitura confortável">📖 Leitura</button>
+  </div>
+</header>
+
+<nav class="main-nav" aria-label="Navegação principal">
+  <button data-view="home" class="active">Início</button>
+  <button data-view="dashboard">Progresso</button>
+  <button data-view="day">Devocional</button>
+  <button data-view="favorites">Favoritos <span id="favCount" class="pill">0</span></button>
+</nav>
+
+<main>
+
+  <!-- INÍCIO -->
+  <section id="view-home" class="view">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Voz do Altíssimo apresenta</p>
+        <h1>21 Dias na Presença de Deus</h1>
+        <p class="subtitle">Três semanas para fortalecer sua fé e aprofundar sua intimidade com Deus.</p>
+        <div class="hero-actions">
+          <button id="startBtn" class="btn primary big">Começar minha jornada</button>
+          <button class="btn ghost big" data-view="dashboard">Ver meu progresso</button>
+        </div>
+        <div class="mini-progress">
+          <div class="mini-progress-top"><span id="homeCount">0 de 21 dias</span><span id="homePct">0%</span></div>
+          <div class="bar"><div id="homeBar" class="bar-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 330" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#f3e2b6" stop-opacity=".9"/>
+              <stop offset="100%" stop-color="#FBF8F1" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f4ecda"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="140" r="150" fill="url(#glow)"/>
+          <g stroke="#C6A15B" stroke-width="2" stroke-linecap="round" opacity=".55">
+            <line x1="200" y1="78" x2="200" y2="22"/>
+            <line x1="150" y1="84" x2="118" y2="36"/>
+            <line x1="250" y1="84" x2="282" y2="36"/>
+            <line x1="110" y1="100" x2="70" y2="70"/>
+            <line x1="290" y1="100" x2="330" y2="70"/>
+          </g>
+          <ellipse cx="200" cy="290" rx="150" ry="14" fill="#c6a15b" opacity=".18"/>
+          <path d="M200 108 C150 86 92 88 48 108 L48 262 C92 242 150 244 200 268 Z" fill="url(#page)" stroke="#C6A15B" stroke-width="2.5"/>
+          <path d="M200 108 C250 86 308 88 352 108 L352 262 C308 242 250 244 200 268 Z" fill="url(#page)" stroke="#C6A15B" stroke-width="2.5"/>
+          <path d="M200 108 L200 268" stroke="#C6A15B" stroke-width="3"/>
+          <g stroke="#cdb98a" stroke-width="2" stroke-linecap="round">
+            <path d="M72 138 C108 128 148 130 182 144"/><path d="M72 160 C108 150 148 152 182 166"/>
+            <path d="M72 182 C108 172 148 174 182 188"/><path d="M72 204 C108 194 148 196 182 210"/>
+            <path d="M218 144 C252 130 292 128 328 138"/><path d="M218 166 C252 152 292 150 328 160"/>
+            <path d="M218 188 C252 174 292 172 328 182"/><path d="M218 210 C252 196 292 194 328 204"/>
+          </g>
+          <path d="M200 118 L200 148 M188 128 L212 128" stroke="#C6A15B" stroke-width="4" stroke-linecap="round" opacity="0"/>
+          <g fill="#C6A15B"><rect x="196" y="40" width="8" height="40" rx="2"/><rect x="184" y="52" width="32" height="8" rx="2"/></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>Uma jornada para o coração</h2>
+      <p>Cada dia foi pensado para caber na sua rotina e aprofundar o seu relacionamento com Deus.</p>
+    </div>
+    <div class="grid benefits">
+      <article class="card benefit"><span class="icon">📖</span><h3>Palavra e reflexão</h3><p>Passagem bíblica, explicação e reflexão aprofundada em cada dia.</p></article>
+      <article class="card benefit"><span class="icon">🙏</span><h3>Orações autorais</h3><p>Uma oração original para acompanhar o seu momento com Deus.</p></article>
+      <article class="card benefit"><span class="icon">🌱</span><h3>Vida prática</h3><p>Aplicação e desafio espiritual para viver o que você aprendeu.</p></article>
+      <article class="card benefit"><span class="icon">✍️</span><h3>Seu diário</h3><p>Anotações pessoais salvas no seu aparelho, dia após dia.</p></article>
+    </div>
+
+    <div class="card highlight">
+      <p class="eyebrow">Palavra em destaque</p>
+      <blockquote class="verse small"><p id="hlVerse"></p><cite id="hlRef"></cite></blockquote>
+      <button id="hlOpen" class="btn ghost">Ler este devocional</button>
+    </div>
+
+    <div class="section-head"><h2>As três semanas</h2></div>
+    <div class="grid weeks">
+      <article class="card week"><span class="week-n">1</span><h3>Aproximando-se de Deus</h3><p>Dias 1 a 7 · tempo, escuta, oração, confiança e gratidão.</p></article>
+      <article class="card week"><span class="week-n">2</span><h3>Fortalecendo sua fé</h3><p>Dias 8 a 14 · fé, Palavra, espera, coragem, perdão e renovo.</p></article>
+      <article class="card week"><span class="week-n">3</span><h3>Vivendo na presença de Deus</h3><p>Dias 15 a 21 · direção, amor, humildade, propósito e paz.</p></article>
+    </div>
+  </section>
+
+  <!-- PROGRESSO -->
+  <section id="view-dashboard" class="view" hidden>
+    <div class="section-head left"><h2>Meu progresso</h2><p id="motivation" class="motivation"></p></div>
+    <div class="grid stats">
+      <div class="card stat"><b id="stDone">0</b><span>concluídos</span></div>
+      <div class="card stat"><b id="stLeft">21</b><span>dias restantes</span></div>
+      <div class="card stat"><b id="stPct">0%</b><span>da jornada</span></div>
+    </div>
+    <div class="card">
+      <div class="bar big-bar"><div id="dashBar" class="bar-fill"></div></div>
+      <div class="dash-actions">
+        <button id="continueBtn" class="btn primary">Continuar de onde parei</button>
+        <button id="finishViewBtn" class="btn ghost" hidden>Ver mensagem de conclusão</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Calendário dos 21 dias</h3>
+      <div id="calendar" class="calendar"></div>
+      <p class="legend"><i class="dot done"></i> Concluído <i class="dot current"></i> Dia atual <i class="dot"></i> Pendente</p>
+    </div>
+    <button id="resetBtn" class="link-btn">Reiniciar jornada (apaga progresso e anotações)</button>
+  </section>
+
+  <!-- DEVOCIONAL -->
+  <section id="view-day" class="view" hidden>
+    <div class="day-nav">
+      <button id="prevBtn" class="btn ghost">← Anterior</button>
+      <select id="daySelect" aria-label="Escolher dia"></select>
+      <button id="nextBtn" class="btn ghost">Próximo →</button>
+    </div>
+
+    <article class="card devo">
+      <p class="eyebrow" id="dWeek"></p>
+      <div class="day-head">
+        <div class="day-badge"><small>Dia</small><b id="dNum"></b></div>
+        <div>
+          <h2 id="dTitle"></h2>
+          <p class="theme">Tema: <b id="dTheme"></b></p>
+        </div>
+      </div>
+      <div class="actions-top">
+        <button id="favBtn" class="btn ghost small" aria-pressed="false">☆ Favoritar</button>
+        <button id="shareBtn" class="btn ghost small">↗ Compartilhar reflexão</button>
+      </div>
+
+      <blockquote class="verse">
+        <span class="tag">Texto bíblico</span>
+        <p id="dVerse"></p>
+        <cite id="dRef"></cite>
+        <small>Almeida Revista e Corrigida · domínio público</small>
+      </blockquote>
+
+      <section class="block"><h3>Entendendo a passagem</h3><p id="dEx"></p></section>
+      <section class="block"><h3>Reflexão espiritual</h3><p id="dRe"></p></section>
+      <section class="block"><h3>Aplicação prática</h3><p id="dAp"></p></section>
+      <section class="block question"><h3>Para refletir</h3><p id="dQ"></p></section>
+      <section class="block prayer"><span class="tag">Oração autoral</span><h3>Oração do dia</h3><p id="dPr"></p></section>
+      <section class="block challenge"><h3>Desafio espiritual</h3><p id="dCh"></p></section>
+
+      <section class="block notes">
+        <h3>Minhas anotações</h3>
+        <textarea id="notes" rows="5" placeholder="Escreva o que Deus falou ao seu coração hoje…"></textarea>
+        <small id="notesStatus">Salvo automaticamente neste aparelho.</small>
+      </section>
+
+      <button id="completeBtn" class="btn primary big full">Concluir devocional</button>
+    </article>
+  </section>
+
+  <!-- FAVORITOS -->
+  <section id="view-favorites" class="view" hidden>
+    <div class="section-head left"><h2>Meus favoritos</h2><p>Devocionais que marcaram o seu coração.</p></div>
+    <div id="favList" class="grid favs"></div>
+    <p id="favEmpty" class="empty" hidden>Você ainda não favoritou nenhum devocional. Toque em “☆ Favoritar” durante a leitura.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p><b>Voz do Altíssimo</b> · 21 Dias na Presença de Deus</p>
+  <p>Textos bíblicos: Almeida Revista e Corrigida (domínio público). Reflexões e orações autorais.</p>
+</footer>
+
+<!-- CONCLUSÃO -->
+<div id="finish" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="finishTitle">
+  <div class="modal">
+    <div class="crown">✝</div>
+    <h2 id="finishTitle">Parabéns! Você concluiu os 21 dias</h2>
+    <p>Você dedicou três semanas a buscar a presença de Deus, e isso não foi em vão. A semente foi plantada; agora continue regando-a com oração, Palavra e comunhão.</p>
+    <p class="verse-inline">“Aquele que em vós começou a boa obra a aperfeiçoará até ao dia de Jesus Cristo.” <b>Filipenses 1:6</b></p>
+    <p>Que Deus abençoe a sua caminhada. Esta é só a primeira de muitas jornadas.</p>
+    <div class="modal-actions">
+      <button id="finishShare" class="btn ghost">Compartilhar conquista</button>
+      <button id="finishClose" class="btn primary">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
