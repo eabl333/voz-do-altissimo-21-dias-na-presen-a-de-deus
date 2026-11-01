@@ -191,3 +191,96 @@ body.reading .hero-art svg{animation:none}
   .tool#readingBtn::before{content:"📖";font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== Base responsiva universal ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+img, video, canvas, svg, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe { border: 0; }
+
+table {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre, code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ===== Tablets e celulares ===== */
+@media (max-width: 768px) {
+  /* Quebra larguras fixas */
+  div, section, article, header, footer, main, aside, nav, form {
+    max-width: 100% !important;
+  }
+
+  [style*="width"] {
+    max-width: 100% !important;
+  }
+
+  /* Colunas viram uma embaixo da outra */
+  .row, .columns, .container, .wrapper, .grid, .flex,
+  [class*="col-"], [class*="column"] {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  [style*="display:flex"], [style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Texto legível */
+  body { font-size: 16px; line-height: 1.5; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  /* Botões e campos fáceis de tocar */
+  button, input, select, textarea, a.btn, .button {
+    min-height: 44px;
+    font-size: 16px; /* evita zoom automático no iPhone */
+    max-width: 100%;
+  }
+
+  input, select, textarea { width: 100%; }
+
+  /* Menu: lista vertical */
+  nav ul { display: flex; flex-direction: column; padding: 0; }
+  nav li { width: 100%; }
+
+  /* Evita posições fixas que quebram o layout */
+  [style*="position:absolute"], [style*="position: absolute"] {
+    position: relative !important;
+  }
+}
+
+/* ===== Celulares pequenos ===== */
+@media (max-width: 480px) {
+  body { padding-left: 10px; padding-right: 10px; }
+  h1 { font-size: 1.5rem; }
+}
