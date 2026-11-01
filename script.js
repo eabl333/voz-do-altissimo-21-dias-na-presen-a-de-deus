@@ -498,3 +498,12 @@
 
   init();
 })();
+
+(function () {
+  if (!document.querySelector('meta[name="viewport"]')) {
+    var m = document.createElement('meta');
+    m.name = 'viewport';
+    m.content = 'width=device-width, initial-scale=1.0';
+    document.head.appendChild(m);
+  }
+})();
